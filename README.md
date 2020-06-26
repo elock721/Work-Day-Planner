@@ -1,55 +1,25 @@
-# Work-Day-Planner
+Day Planner Overview
 
-# 05 Third-Party APIs: Work Day Scheduler
+This application allows the user to log daily work tasks in an online scheduler 
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+The hours listed are typical working hours of 9 am to 5 pm
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+Each text box allows the user to type in their specific tasks at each hour of the day and then save it with the "save button" provided on the right of the text box
 
-## User Story
+Text will remain afer refresh if saved
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+-----------------------------
 
-## Acceptance Criteria
+Psuedo Code
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event 
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+The application is comprised of an HTML, CSS and Javascript file
 
-The following animation demonstrates the application functionality:
+9 row time blocks in the html file give the page a majority of it's structure 
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+Date at the top is provided by moment()
 
-## Review
+The timeUpdate function provides the correct colors on the time blocks 
+relative to the current time of day
 
-You are required to submit the following for review:
+Loops and handleClick function towards the bottom of the Javascript page store the text content in local storage and keep text on page after refresh 
 
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
-
-
-
-capture what the typed and save to local storgae and when page first loads 
-
-key will ref 

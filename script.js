@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var timeStamp = $("#currentDay")
 
-
+// current date at top of screen
     dateDisplay();
 
     function dateDisplay() {
@@ -10,7 +10,8 @@ $(document).ready(function () {
     }
 
 });
-
+// function responsible for color coding the 
+// approriate hours according to the current time
 function timeUpdate(){
     var currentHour = moment().hours();
     $(".time-block").each(function(){
@@ -34,6 +35,39 @@ function timeUpdate(){
 
 timeUpdate();
 
-// const m = moment();
+// selecting buttons, storing text content in local storage
+// and keep text on page after refresh  
+var logBtns = document.querySelectorAll(".saveBtn");
+logBtns.forEach(function(btn) {
+    btn.addEventListener("click", handleClick)
+})
+var workNotes = document.querySelectorAll(".description");
+var refresh = document.querySelectorAll(".hour");
 
-// console.log(m.toString()); 
+refresh.forEach(element => {
+    var hour = element.textContent.trim();
+    var notes = localStorage.getItem(hour);
+    if(notes !== null){
+    let textArea = element.parentNode.querySelector("textarea");
+    textArea.value = notes
+    }
+});
+
+function handleClick(event) {
+    var parent = this.parentNode;
+    var textArea = parent.querySelector("textarea");
+    var time = parent.textContent.trim()
+    var timeMessg = textArea.value
+    localStorage.setItem(time, timeMessg)
+    
+}
+
+
+
+
+
+
+
+
+
+
