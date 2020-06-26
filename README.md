@@ -6,7 +6,7 @@ The hours listed are typical working hours of 9 am to 5 pm
 
 Each text box allows the user to type in their specific tasks at each hour of the day and then save it with the "save button" provided on the right of the text box
 
-Text will remain afer refresh if saved
+Text will remain after refresh if saved
 
 -----------------------------
 
